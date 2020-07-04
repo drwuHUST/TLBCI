@@ -1,7 +1,9 @@
 function [yt1,yRaw,f,alpha,K]=wAR(Xs,ys,Xt,yt0,yt1,options,K)
 %% Weighted adaptation regularization (wAR) for offline calibration (2-class classification)
+%% D. Wu*, "Online and Offline Domain Adaptation for Reducing BCI Calibration Effort," 
+%% IEEE Trans. on Human-Machine Systems, vol. 47, no. 4, pp. 550-563, 2017.
 %% Dongrui Wu, drwu09@gmail.com
-
+%
 %% Inputs:
 %%  Xs: Features in source domain
 %%  ys: column vector; labels in source domain; the two classes must be labeled as -1 and 1
@@ -18,7 +20,7 @@ function [yt1,yRaw,f,alpha,K]=wAR(Xs,ys,Xt,yt0,yt1,options,K)
 %%      lambda: regularization for marginal and conditional probability distributions; default 10
 %%      wt: overall weight for the target domain samples; default 2
 %%  K: Optional, Kernal matrix for [Xs; Xt]; avoid computing K every time
-
+%
 %% Outputs:
 %%  yt1: column vector; estimated labels for the last size(Xt,1)-length(yt0) rows of Xt
 %%  f: weighted training accuracy on Xs and the first ml rows of Xt; used as weight in wARSDS
