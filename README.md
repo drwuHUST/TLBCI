@@ -1,7 +1,7 @@
 # TLBCI
 Matlab source code of the paper (2020_TLBCI_INS_Wu_v3.pdf in this folder, or http://arxiv.org/abs/2007.03746):
 
-D. Wu, X. Jiang, R. Peng, W. Kong, J. Huang and Z. Zeng, Transfer Learning for Motor Imagery Based Brain-Computer Interfaces: A Complete Pipeline, Information Sciences, 2021, submitted.
+D. Wu, X. Jiang, R. Peng, Transfer Learning for Motor Imagery Based Brain-Computer Interfaces: A Tutorial, Neural Networks, 2022, submitted.
 
 Run main_Preprocess.m to preprocess the raw EEG data downloaded from BCI Competition IV.
 
