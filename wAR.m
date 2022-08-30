@@ -27,6 +27,10 @@ function [yt1,yRaw,f,alpha,K]=wAR(Xs,ys,Xt,yt0,yt1,options,K)
 %%  alpha: parameter alpha in the classifier
 %%  K: Kernal matrix for [Xs; Xt]
 
+%%  Note: svmtrain uses the weighted libsvm at https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#weights_for_data_instances, 
+%%  instead of the traditional (unweighted) svm. Please make sure weighted libsvm is compiled and installed correctly 
+%%  (the .mex files are in the Matlab path) before running this code.
+
 if nargin<6; options=[]; end
 
 if ~isfield(options,'sigma');     options.sigma=0.1;  end % weight on structural risk
